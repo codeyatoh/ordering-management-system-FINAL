@@ -1,0 +1,83 @@
+.optionsContainer {
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .optionCard {
+    width: 250px;
+    background-color: #2C3930;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .optionCard:hover {
+    transform: translateY(-2px);
+  }
+  
+  .cardHeader {
+    background-color: #2C3930;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .optionTitle {
+    color: #DCD7C9;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .imageSection {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .optionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cardFooter {
+    background-color: #2C3930;
+    padding: 1rem;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .description {
+    color: #DCD7C9;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .optionsContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .optionCard {
+      width: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .optionCard {
+      width: 100%;
+      max-width: 300px;
+    }
+  }

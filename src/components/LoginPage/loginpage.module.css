@@ -1,0 +1,181 @@
+/* LoginPage.module.css */
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DCD7C9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loginTitle {
+    text-align: center;
+    color: #2C3930;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+}
+
+.loginCard {
+    background-color: #2C3930;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.formTitle {
+    text-align: center;
+    color: #DCD7C9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputLabel {
+    color: #DCD7C9;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.inputField {
+    width: 100%;
+    height: 48px;
+    padding: 0 0.75rem;
+    border: 2px solid #DCD7C9;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #DCD7C9;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    border-color: #DCD7C9;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inputField::placeholder {
+    color: #DCD7C9;
+    opacity: 1;
+}
+
+.inputIconContainer {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+.inputIcon {
+    color: #DCD7C9;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.inputIconContainer .inputField {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 48px;
+    padding: 0;
+    font-size: 1rem;
+    color: #DCD7C9;
+}
+
+.passwordInputContainer {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+    position: relative;
+}
+
+.passwordInputContainer .inputField {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 48px;
+    padding: 0;
+    font-size: 1rem;
+    color: #DCD7C9;
+}
+
+.passwordToggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #DCD7C9;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordToggle:hover {
+    color: #DCD7C9;
+}
+
+.submitButton {
+    background-color: #DCD7C9;
+    color: #2C3930;
+    border: none;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+    height: 48px;
+}
+
+.submitButton:hover {
+    background-color: #bfb9a6;
+}
+
+.submitButton:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .loginCard {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    .loginTitle {
+        font-size: 1.25rem;
+    }
+}

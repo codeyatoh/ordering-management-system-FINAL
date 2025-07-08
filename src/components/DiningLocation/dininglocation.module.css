@@ -1,0 +1,157 @@
+/* Page-level styles only */
+.container {
+  min-height: 100vh;
+  background-color: #e8e2d4;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+
+.title {
+  color: #2C3930;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.crewInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #2C3930;
+  font-weight: 500;
+}
+
+.logoutBtn {
+  background: #2C3930;
+  color: #DCD7C9;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutBtn:hover {
+  background: #22332B;
+}
+
+.logoutModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 57, 48, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.logoutModal {
+  background: #DCD7C9;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.logoutModal h3 {
+  color: #2C3930;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.logoutModal p {
+  color: #2C3930;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.logoutActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.logoutActions button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logoutActions button:first-child {
+  background: #A67C52;
+  color: #fff;
+}
+
+.logoutActions button:first-child:hover {
+  background: #8c6842;
+}
+
+.logoutActions button:last-child {
+  background: #2C3930;
+  color: #DCD7C9;
+}
+
+.logoutActions button:last-child:hover {
+  background: #22332B;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .crewInfo {
+    position: static;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logoutModal {
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+}

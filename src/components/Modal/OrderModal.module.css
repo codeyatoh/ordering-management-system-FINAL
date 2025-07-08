@@ -1,0 +1,268 @@
+/* Modal Overlay and Box */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(217, 217, 217, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #2C3930;
+  color: #D9D9D9;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 57, 48, 0.18);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  width: 700px;
+  height: 500px;
+  min-width: unset;
+  max-width: unset;
+  min-height: unset;
+  max-height: unset;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #D9D9D9;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #A27B5C;
+}
+
+.coffee-modal-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.coffee-modal-img {
+  width: 120px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.coffee-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.coffee-modal-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #D9D9D9;
+}
+
+.coffee-modal-price {
+  color: #D9D9D9;
+  font-weight: 500;
+}
+
+.coffee-modal-total {
+  color: #D9D9D9;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.coffee-modal-quantity-label,
+.coffee-modal-size-label {
+  font-weight: 700;
+  color: #D9D9D9;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.coffee-modal-quantity-controls,
+.coffee-modal-size-options {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.coffee-modal-quantity-controls button,
+.coffee-modal-size-btn {
+  background: #D9D9D9;
+  color: #2C3239;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.coffee-modal-quantity-value {
+  font-weight: 700;
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+  color: #D9D9D9;
+}
+
+.coffee-modal-size-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 90px;
+}
+
+.coffee-modal-size-option span {
+  display: block;
+  text-align: center;
+}
+
+.coffee-modal-size-label-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #D9D9D9;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.coffee-modal-size-addon {
+  font-size: 12px;
+  color: #D9D9D9;
+  margin-left: 4px;
+  margin-bottom: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.coffee-modal-quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.coffee-modal-footer {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.coffee-modal-cancel-btn {
+  flex: 1;
+  background: #A27B5C;
+  color: #D2F0F6;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.coffee-modal-cancel-btn:hover {
+  background: #8d684a;
+}
+
+.coffee-modal-add-btn {
+  flex: 1;
+  background: #DCD7C9;
+  color: #2C3239;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.coffee-modal-add-btn:hover {
+  background: #eae3d6;
+}
+
+.icon-btn {
+  background: #D9D9D9;
+  color: #2C3239;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logout-modal-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.logout-modal-title {
+  color: #D9D9D9;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+}
+
+.logout-modal-message {
+  color: #D9D9D9;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 16px;
+} 

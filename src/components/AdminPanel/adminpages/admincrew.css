@@ -1,0 +1,211 @@
+.adminpanel-main {
+  flex: 1;
+  background: #DCD7C9;
+  min-height: 100vh;
+  padding: 32px 32px 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.crew-header-row {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.crew-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: #2C3930;
+  color: #DCD7C9;
+  padding: 6px 32px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.crew-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.crew-add-btn {
+  background: #2C3930;
+  color: #DCD7C9;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 36px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.crew-add-btn:hover {
+  background: #22332B;
+}
+
+.crew-search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.crew-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.crew-search-icon {
+  position: absolute;
+  left: 12px;
+  color: #2C3930;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.crew-search-input {
+  padding: 8px 16px 8px 36px;
+  border: 1.5px solid #2C3930;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 260px;
+  background: #fff;
+  color: #2C3930;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.crew-search-input:focus {
+  border-color: #A27B5C;
+}
+
+.crew-search-filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.crew-search-filter-select {
+  padding: 8px 24px 8px 8px;
+  border: 1.5px solid #2C3930;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #2C3930;
+  height: 40px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.crew-search-filter-select:focus {
+  border-color: #A27B5C;
+}
+
+.crew-search-filter-icon {
+  font-size: 1.4rem;
+  color: #2C3930;
+  margin-left: 2px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.crew-table-container {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+.crew-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 57, 48, 0.04);
+}
+.crew-table thead tr {
+  background: #2C3930;
+}
+.crew-table th {
+  color: #DCD7C9;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 12px 10px;
+  text-align: left;
+}
+.crew-table td {
+  color: #2C3930;
+  font-size: 1.05rem;
+  padding: 10px 10px;
+  border-bottom: 2px solid #DCD7C9;
+}
+.crew-table tr:last-child td {
+  border-bottom: none;
+}
+.crew-id {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.crew-fname, .crew-lname, .crew-email {
+  font-weight: 600;
+}
+.crew-gender, .crew-status, .crew-created {
+  font-weight: 700;
+}
+.crew-actions {
+  display: flex;
+  gap: 8px;
+}
+.crew-action-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #2C3930;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.crew-action-btn:hover {
+  color: #E74C3C;
+}
+
+@media (max-width: 900px) {
+  .adminpanel-main {
+    padding: 24px 8px 0 8px;
+  }
+  .crew-title {
+    font-size: 1.3rem;
+    padding: 4px 12px;
+  }
+  .crew-add-btn {
+    font-size: 1rem;
+    padding: 6px 18px;
+  }
+  .crew-search-input {
+    width: 120px;
+    font-size: 0.9rem;
+    padding-left: 32px;
+  }
+  .crew-search-filter-select {
+    font-size: 0.9rem;
+    height: 36px;
+  }
+  .crew-table th, .crew-table td {
+    font-size: 0.9rem;
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .adminpanel-main {
+    padding: 12px 2px 0 2px;
+  }
+  .crew-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .crew-search-container {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+} 

@@ -1,0 +1,117 @@
+.logout-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logout-modal-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.logout-modal-title {
+  color: #D9D9D9;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+}
+
+.logout-modal-message {
+  color: #D9D9D9;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(217, 217, 217, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #2C3930;
+  color: #D9D9D9;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 57, 48, 0.18);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  width: 400px;
+  height: 300px;
+  min-width: unset;
+  max-width: unset;
+  min-height: unset;
+  max-height: unset;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logout-modal-footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+  justify-content: center;
+}
+
+.logout-modal-cancel-btn {
+  flex: 1;
+  background: #A27B5C;
+  color: #D2F0F6;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-modal-cancel-btn:hover {
+  background: #8d684a;
+}
+
+.logout-modal-logout-btn {
+  flex: 1;
+  background: #DCD7C9;
+  color: #2C3239;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-modal-logout-btn:hover {
+  background: #eae3d6;
+}
+
+.logout-title-box {
+  display: inline-block;
+  background-color: #DCD7C9;
+  color: #2C3930;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  text-align: center;
+} 

@@ -1,0 +1,91 @@
+.adminpanel-root {
+  display: flex;
+  min-height: 100vh;
+  background: #181515;
+}
+
+.adminpanel-sidebar {
+  width: 270px;
+  background: #2C3930;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0 0 0;
+  min-height: 100vh;
+}
+
+.adminpanel-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.adminpanel-title {
+  color: #DCD7C9;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.adminpanel-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.adminpanel-nav-btn {
+  width: 90%;
+  background: none;
+  border: 2px solid #DCD7C9;
+  color: #DCD7C9;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 12px 0 12px 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.adminpanel-nav-btn.active {
+  background: #DCD7C9;
+  color: #22332B;
+  border: 2px solid #DCD7C9;
+}
+
+.adminpanel-nav-btn.logout {
+  border: 2px solid #DCD7C9;
+  color: #DCD7C9;
+  margin-top: 18px;
+}
+
+.adminpanel-nav-btn.logout:hover {
+  background: #DCD7C9;
+  color: #DCD7C9;
+}
+
+.adminpanel-nav-btn:hover:not(.active):not(.logout) {
+  background: #DCD7C9;
+  color: #2C3930;
+  border: 2px solid #DCD7C9;
+}
+
+.adminpanel-nav-icon {
+  font-size: 1.3rem;
+  margin-right: 0;
+}
+
+.adminpanel-main {
+  flex: 1;
+  background: #DCD7C9;
+  min-height: 100vh;
+  padding: 0;
+} 
