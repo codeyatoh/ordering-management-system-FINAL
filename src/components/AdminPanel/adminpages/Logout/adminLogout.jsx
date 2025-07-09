@@ -1,7 +1,7 @@
 import React from 'react';
 import './adminLogout.css';
 import { signOut } from 'firebase/auth';
-import { auth } from '../../../../firebase';
+import { auth } from "../../../../config/firebase";
 import { useNavigate } from 'react-router-dom';
 
 function AdminLogout({ isOpen, onClose }) {

@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineMail, AiOutlineLock } fro
 import styles from './LoginPage.module.css';
 import { toast } from 'react-toastify';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../../firebase';
+import { auth, db } from '../../config/firebase';
 import { UserContext } from '../../context/UserContext';
 import { authenticateCrew, isValidEmail, isValidPassword } from '../../utils/authUtils';
 

@@ -265,4 +265,61 @@
   margin-bottom: 32px;
   text-align: center;
   font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .modal-box {
+    width: 90vw;
+    max-width: 98vw;
+    min-width: unset;
+    padding: 1.2rem 1rem 1rem 1rem;
+    font-size: 1rem;
+  }
+  .coffee-modal-footer {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: stretch;
+  }
+  .coffee-modal-cancel-btn, .coffee-modal-add-btn {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-box {
+    width: 98vw;
+    max-width: 100vw;
+    min-width: unset;
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .modal-content {
+    padding: 0.2rem 0.1rem;
+    font-size: 0.95rem;
+  }
+  .coffee-modal-footer {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: stretch;
+  }
+  .coffee-modal-cancel-btn, .coffee-modal-add-btn {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .modal-close-btn {
+    font-size: 1.5rem;
+  }
 } 

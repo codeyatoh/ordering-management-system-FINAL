@@ -13,7 +13,7 @@ import {
   ArcElement,
 } from 'chart.js';
 import { FaRegCalendarAlt, FaRegClock } from 'react-icons/fa';
-import { db } from '../../../firebase';
+import { db } from '../../../config/firebase';
 import { collection, getDocs, query, where, Timestamp, onSnapshot } from 'firebase/firestore';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);

@@ -3,7 +3,7 @@ import AdminSidebar from '../admin.sidebar';
 import './admincrew.css';
 import { FaSearch, FaFilter, FaEdit, FaTrash } from 'react-icons/fa';
 import CrewEditModal from '../adminmodal/crewEditModal';
-import { db } from '../../../firebase';
+import { db } from '../../../config/firebase';
 import { collection, addDoc, getDocs, Timestamp, updateDoc, doc, runTransaction } from 'firebase/firestore';
 import DeleteCrewModal from './deletecrew.jsx';
 import EditCrewModal from './editcrew.jsx';

@@ -11,7 +11,7 @@ import Receipt from './receipt';
 import './CoffeeShop.css';
 import { toast } from 'react-toastify';
 import { handleCancel, handleRemoveItem, handleAddCoffeeOrder, handleAddBreadOrder, handleAddToCart } from '../../handlers/cartHandlers';
-import { db } from '../../firebase';
+import { db } from '../../config/firebase';
 import { collection, getDocs, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
 import { UserContext } from '../../context/UserContext';
 import axios from 'axios';
@@ -144,24 +144,25 @@ function CoffeeShop() {
     toast.success('Order completed successfully!');
     // Save order to Firestore
     try {
-      await addDoc(collection(db, 'orders'), {
+      const orderPayload = {
         order_id: newOrderNumber,
         crew_id: crew.crew_id,
         total_items: getTotalItems(),
         total_price: getTotalPrice(),
         order_status: 'Completed',
         created_at: serverTimestamp(),
-        order_items: cart.map(item => ({
-          ...item,
-        })),
+        order_items: cart.map(item => ({ ...item })),
         payment: {
           cash: Number(customerPayment),
           change: Number(customerPayment) - getTotalPrice(),
         },
         order_type: orderType,
-      });
-      // Log the raw crew object for debugging
-      console.log('Raw crew object:', crew);
+        first_name: crew.first_name || crew.firstName || 'FirstName',
+        last_name: crew.last_name || crew.lastName || 'LastName',
+      };
+      console.log('Order payload to Firestore:', orderPayload);
+      const docRef = await addDoc(collection(db, 'orders'), orderPayload);
+      console.log('Order saved to Firestore! DocRef:', docRef.id);
       // Prepare crew object (only required fields)
       const crewData = {
         crew_id: String(crew.crew_id),

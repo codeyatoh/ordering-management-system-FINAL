@@ -6,7 +6,7 @@ import MenuAddModal from '../adminmodal/menuAddModal';
 import MenuEditModal from '../adminmodal/menuEditModal';
 import EditMenu from './editmenu';
 import DeleteMenu from './deletemune';
-import { db } from '../../../firebase';
+import { db } from '../../../config/firebase';
 import { collection, getDocs, addDoc, updateDoc, doc, serverTimestamp, deleteDoc } from 'firebase/firestore';
 
 function AdminMenu() {

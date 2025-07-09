@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AdminSidebar from '../../admin.sidebar';
 import '../../adminpanel.css';
 import './adminpayment.css';
-import { db } from '../../../../firebase';
+import { db } from "../../../../config/firebase";
 import { collection, getDocs } from 'firebase/firestore';
 import { FaSearch, FaFilter } from 'react-icons/fa';
 
