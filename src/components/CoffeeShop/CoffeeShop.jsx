@@ -14,7 +14,6 @@ import { handleCancel, handleRemoveItem, handleAddCoffeeOrder, handleAddBreadOrd
 import { db } from '../../config/firebase';
 import { collection, getDocs, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
 import { UserContext } from '../../context/UserContext';
-import axios from 'axios';
 
 function CoffeeShop() {
   // Get the order type (dine-in or take-out) from the previous page
@@ -184,22 +183,8 @@ function CoffeeShop() {
         quantity: item.quantity || 1,
         price: item.price
       }));
-      // Log the data before sending
-      console.log('Sending to backend:', { crew: crewData, order: orderData, order_items: orderItems });
-      try {
-        const response = await axios.post('http://localhost:3030/receive-order', {
-          crew: crewData,
-          order: orderData,
-          order_items: orderItems
-        });
-        console.log('Backend response:', response.data);
-        toast.success('Order also sent to executive backend!');
-      } catch (error) {
-        console.error('Error sending to backend:', error.response ? error.response.data : error.message);
-        toast.error('Failed to send order to executive backend.');
-      }
     } catch (error) {
-      toast.error('Failed to save order or send to backend.');
+      toast.error('Failed to save order.');
       console.error(error);
     }
     // Do not clear cart yet, needed for receipt
